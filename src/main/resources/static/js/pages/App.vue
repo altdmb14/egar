@@ -6,7 +6,7 @@
         </v-toolbar>
         <v-content>
             <v-container>
-                <messages-list :messages="messages" />
+                <messages-list :messages="messages" :soaptime="soaptime"/>
             </v-container>
         </v-content>
     </v-app>
@@ -21,7 +21,8 @@
         },
         data() {
             return {
-                messages: frontendData.messages
+                messages: frontendData.messages,
+                soaptime: frontendData.soaptime
             }
         }
     }

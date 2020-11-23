@@ -1,13 +1,13 @@
 <template>
     <v-app>
-        <v-app-bar app>
-            Egartech
-        </v-app-bar>
+        <v-toolbar app>
+            <v-toolbar-title>Egartech</v-toolbar-title>
+            <v-spacer></v-spacer>
+        </v-toolbar>
         <v-content>
-            <div>
-                Необходимо авторизоваться
-                <messages-list :messages="messages" />
-            </div>
+            <v-container>
+                <messages-list :messages="messages" :soaptime="soaptime"/>
+            </v-container>
         </v-content>
     </v-app>
 
@@ -21,7 +21,8 @@
         },
         data() {
             return {
-                messages: frontendData.messages
+                messages: frontendData.messages,
+                soaptime: frontendData.soaptime
             }
         }
     }
